@@ -1,0 +1,20 @@
+%border-shadow {
+  border-radius: 0px 0px 12px 12px;
+  -webkit-box-shadow: 0px 5px 6px -4px rgba(34, 60, 80, 1);
+  -moz-box-shadow: 0px 5px 6px -4px rgba(34, 60, 80, 1);
+  box-shadow: 0px 5px 6px -4px rgba(34, 60, 80, 1);
+}
+%pseudo-header-links {
+  content: "";
+  order: -1;
+  display: block;
+  width: 6px;
+  height: 6px;
+  margin: 0 10px;
+  border-radius: 50%;
+  background-color: #e6e6f0;
+}
+%font-links-header {
+  font-size: 16px;
+  line-height: 20px;
+}

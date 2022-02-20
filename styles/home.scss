@@ -1,0 +1,137 @@
+@import "silent-class";
+@import "vars";
+
+// Градиент и тени
+.main {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(
+    228.57deg,
+    #323264 11.93%,
+    #323264 57.17%,
+    #643e72 87.46%
+  );
+  @extend %border-shadow;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    right: 20px;
+    left: 20px;
+    height: 10px;
+    background-color: #cacadb;
+    @extend %border-shadow;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 40px;
+    left: 40px;
+    height: 10px;
+    background-color: #e7e7f2;
+    @extend %border-shadow;
+  }
+
+  // Header
+
+  .header {
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    //   Лого и контакты
+
+    .logo-container {
+      display: flex;
+      align-items: flex-start;
+    }
+    .header-contacts {
+      display: flex;
+      align-items: center;
+
+      .langs-list {
+        display: flex;
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+      }
+      .lang-btn {
+        display: block;
+        padding: 5px 6px;
+        border: none;
+        border-radius: 8px;
+        background-color: transparent;
+        color: #fff;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 15px;
+        text-align: center;
+        letter-spacing: 1px;
+        cursor: pointer;
+      }
+
+      .address,
+      .phone-number,
+      .social-link {
+        display: flex;
+        align-items: center;
+        font-weight: 100;
+        color: #ffffff;
+        text-decoration: none;
+        @extend %font-links-header;
+      }
+      .phone-number {
+        font-weight: bold;
+      }
+
+      .address::after,
+      .phone-number::after,
+      .social-link::after {
+        @extend %pseudo-header-links;
+      }
+
+      .address:hover,
+      .phone-number:hover,
+      .social-link:hover {
+        color: #c1446b;
+      }
+
+      .lang-btn:hover {
+        box-shadow: inset 0 0 0 2px $color-hover-btn;
+      }
+
+      .lang-btn-active {
+        background-color: $color-hover-btn;
+      }
+    }
+
+    // ===============
+    //  Навигация
+
+    .header-nav {
+      display: flex;
+      justify-content: flex-end;
+      gap: 0 15px;
+      margin-top: 16px;
+
+      .nav-link {
+        border-bottom: 2px solid transparent;
+        padding-bottom: 2px;
+        font-weight: bold;
+        color: #fff;
+        text-decoration: none;
+        @extend %font-links-header;
+      }
+    }
+    // ============
+  }
+  // ==========
+
+  // Ссылка и слоган перед карточками
+  .services-link {
+    margin-top: 60px;
+  }
+}
