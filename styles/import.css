@@ -1,33 +1,3 @@
-@font-face {
-  font-family: "Montserrat";
-  src: local("Montserrat Hairline"), local("Montserrat-Hairline"), url("montserrathairline.woff") format("woff"), format("truetype");
-  font-weight: 100;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Montserrat";
-  src: local("Montserrat Light"), local("Montserrat-Light"), format("woff2"), url("montserratlight.woff") format("woff"), format("truetype");
-  font-weight: 300;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Montserrat";
-  src: local("Montserrat"), local("Montserrat-Regular"), url("montserrat.woff") format("woff"), format("truetype");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Montserrat";
-  src: local("Montserrat Bold"), local("Montserrat-Bold"), url("montserratbold.woff") format("woff"), format("truetype");
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Montserrat";
-  src: local("Montserrat Black"), local("Montserrat-Black"), url("montserratblack.woff") format("woff"), format("truetype");
-  font-weight: 900;
-  font-style: normal;
-}
 .main::after, .main::before, .main {
   border-radius: 0px 0px 12px 12px;
   -webkit-box-shadow: 0px 5px 6px -4px #223c50;
@@ -55,10 +25,29 @@
   line-height: 20px;
 }
 
+.main .services-cards .services-card .card-text {
+  font-size: 16px;
+  line-height: 26px;
+  color: #ffffff;
+}
+
+.main .slogan, .main .goals-wrapper .goals .custom-item1, .main .goals-wrapper .goals .goal-item {
+  font-weight: bold;
+  font-size: 38px;
+  line-height: 46px;
+}
+
+.main .slogan, .main .goals-wrapper .goals .custom-item1 {
+  background-image: linear-gradient(90deg, #f0145a, #ef8080);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
 .main {
   position: relative;
   margin: 0;
-  padding: 0;
+  padding-bottom: 60px;
   background-image: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643e72 87.46%);
 }
 .main::before {
@@ -105,7 +94,7 @@
   border: none;
   border-radius: 8px;
   background-color: transparent;
-  color: #fff;
+  color: #ffff;
   font-weight: bold;
   font-size: 12px;
   line-height: 15px;
@@ -118,8 +107,8 @@
 .main .header .header-contacts .social-link {
   display: flex;
   align-items: center;
-  font-weight: 100;
-  color: #ffffff;
+  font-weight: normal;
+  color: #ffff;
   text-decoration: none;
 }
 .main .header .header-contacts .phone-number {
@@ -148,6 +137,84 @@
   font-weight: bold;
   color: #fff;
   text-decoration: none;
+}
+.main .header .header-nav .nav-link:hover {
+  color: #c1446b;
+}
+.main .goals-wrapper {
+  margin-top: 60px;
+  padding: 0 120px;
+  display: flex;
+}
+.main .goals-wrapper .goals {
+  flex-shrink: 1;
+  flex-grow: 1;
+  padding: 14.5px 60px 14.5px 0;
+  gap: 30px;
+  max-width: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  border-right: 4px solid rgba(255, 255, 255, 0.3);
+}
+.main .goals-wrapper .goals .goal-item {
+  color: #b3b3ba;
+}
+.main .goals-wrapper .goals .custom-item2 {
+  color: #f0145a;
+}
+.main .goals-wrapper .goal-slogan {
+  padding: 73px 0 73px 60px;
+  max-width: 65%;
+}
+.main .goals-wrapper .goal-slogan .goal-title {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 37px;
+  color: #ffff;
+}
+.main .goals-wrapper .goal-slogan .goal-text {
+  margin-top: 30px;
+  font-size: 19px;
+  line-height: 30px;
+  color: #ffff;
+}
+.main .services-link {
+  margin-top: 60px;
+}
+.main .slogan {
+  width: fit-content;
+  margin-top: 10px;
+}
+.main .services-cards {
+  margin: 60px 0 0;
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px 60px;
+}
+.main .services-cards .services-card {
+  flex-shrink: 1;
+  flex-grow: 1;
+  flex-basis: 493px;
+}
+.main .services-cards .services-card .card-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+.main .services-cards .services-card .card-title {
+  margin-top: 30px;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 27px;
+  color: #24a3ff;
+  font-weight: 500;
+}
+.main .services-cards .services-card .card-text {
+  margin: 15px 0 0;
 }
 
 * {
@@ -191,6 +258,25 @@ body {
 .main .header .header-contacts .social-link, .main .header .header-nav .nav-link {
   font-size: 16px;
   line-height: 20px;
+}
+
+.main .services-cards .services-card .card-text {
+  font-size: 16px;
+  line-height: 26px;
+  color: #ffffff;
+}
+
+.main .goals-wrapper .goals .goal-item, .main .goals-wrapper .goals .custom-item1, .main .slogan {
+  font-weight: bold;
+  font-size: 38px;
+  line-height: 46px;
+}
+
+.main .goals-wrapper .goals .custom-item1, .main .slogan {
+  background-image: linear-gradient(90deg, #f0145a, #ef8080);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 /*# sourceMappingURL=import.css.map */

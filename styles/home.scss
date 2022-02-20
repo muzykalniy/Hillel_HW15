@@ -5,7 +5,7 @@
 .main {
   position: relative;
   margin: 0;
-  padding: 0;
+  padding-bottom: 60px;
   background-image: linear-gradient(
     228.57deg,
     #323264 11.93%,
@@ -64,7 +64,7 @@
         border: none;
         border-radius: 8px;
         background-color: transparent;
-        color: #fff;
+        color: $color-constant-1;
         font-weight: bold;
         font-size: 12px;
         line-height: 15px;
@@ -78,8 +78,8 @@
       .social-link {
         display: flex;
         align-items: center;
-        font-weight: 100;
-        color: #ffffff;
+        font-weight: normal;
+        color: $color-constant-1;
         text-decoration: none;
         @extend %font-links-header;
       }
@@ -96,7 +96,7 @@
       .address:hover,
       .phone-number:hover,
       .social-link:hover {
-        color: #c1446b;
+        color: $nav-link-hover;
       }
 
       .lang-btn:hover {
@@ -124,14 +124,109 @@
         color: #fff;
         text-decoration: none;
         @extend %font-links-header;
+        &:hover {
+          color: $nav-link-hover;
+        }
       }
     }
+    // Блок с логотипом
+    //  .main-logo {
+    //    background-image: url(../img/logo/Logo-main.svg);
+    //  }
+
     // ============
   }
   // ==========
 
+  // Цели
+  .goals-wrapper {
+    margin-top: 60px;
+    padding: 0 120px;
+    display: flex;
+    .goals {
+      flex-shrink: 1;
+      flex-grow: 1;
+      padding: 14.5px 60px 14.5px 0;
+      gap: 30px;
+      max-width: 35%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      border-right: 4px solid rgba(255, 255, 255, 0.3);
+      .goal-item {
+        @extend %custom-font;
+        color: #b3b3ba;
+      }
+      .custom-item1 {
+        @extend %custom-font;
+        @extend %gradient-1;
+      }
+      .custom-item2 {
+        color: #f0145a;
+      }
+    }
+    .goal-slogan {
+      padding: 73px 0 73px 60px;
+      max-width: 65%;
+      .goal-title {
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 37px;
+        color: $color-constant-1;
+      }
+      .goal-text {
+        margin-top: 30px;
+        font-size: 19px;
+        line-height: 30px;
+        color: $color-constant-1;
+      }
+    }
+  }
+
   // Ссылка и слоган перед карточками
   .services-link {
     margin-top: 60px;
+  }
+  .slogan {
+    width: fit-content;
+    margin-top: 10px;
+    @extend %custom-font;
+    @extend %gradient-1;
+  }
+
+  //   Карточки
+
+  .services-cards {
+    margin: 60px 0 0;
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px 60px;
+
+    .services-card {
+      flex-shrink: 1;
+      flex-grow: 1;
+      flex-basis: 493px;
+
+      .card-header {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+      }
+      .card-title {
+        margin-top: 30px;
+        font-weight: normal;
+        font-size: 22px;
+        line-height: 27px;
+        color: #24a3ff;
+        font-weight: 500;
+      }
+      .card-text {
+        margin: 15px 0 0;
+        @extend %card-text-font;
+      }
+    }
   }
 }
