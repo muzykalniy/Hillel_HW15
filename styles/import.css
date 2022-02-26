@@ -31,13 +31,13 @@
   color: #ffffff;
 }
 
-.main .slogan, .main .goals-wrapper .goals .custom-item1, .main .goals-wrapper .goals .goal-item, .main .header .header-inner .header-inner-slogan-wrapper .inner-slogan {
+.main .slogan, .main .header .header-inner .header-inner-slogan-wrapper .inner-slogan {
   font-weight: bold;
   font-size: 38px;
   line-height: 46px;
 }
 
-.main .slogan, .main .goals-wrapper .goals .custom-item1 {
+.main .slogan {
   background-image: linear-gradient(90deg, #f0145a, #ef8080);
   -webkit-background-clip: text;
   background-clip: text;
@@ -73,6 +73,7 @@
   background-image: url(../img/logo/Logo-main.svg);
   background-repeat: no-repeat;
   background-position: top;
+  background-size: auto 100%;
   min-height: 100vh;
 }
 .main .header .header-inner .header-inner-wrapper {
@@ -169,43 +170,56 @@
 .main .header .header-nav .nav-link:hover {
   color: #c1446b;
 }
-.main .goals-wrapper {
-  margin: 60px;
-  padding: 0;
+.main .experience .container-1 {
+  padding: 30px 200px;
   display: flex;
+  overflow-x: hidden;
 }
-.main .goals-wrapper .goals {
-  flex-shrink: 1;
-  flex-grow: 1;
-  padding: 14.5px 60px 14.5px 0;
-  gap: 30px;
-  max-width: 40%;
+.main .experience .experience__list {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  border-right: 4px solid rgba(255, 255, 255, 0.3);
+  gap: 30px;
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  padding-bottom: 0;
+  padding-right: 60px;
+  text-align: right;
 }
-.main .goals-wrapper .goals .goal-item {
-  color: #b3b3ba;
-}
-.main .goals-wrapper .goals .custom-item2 {
-  color: #f0145a;
-}
-.main .goals-wrapper .goal-slogan {
-  padding: 73px 0 73px 60px;
-  max-width: 60%;
-}
-.main .goals-wrapper .goal-slogan .goal-title {
+.main .experience .experience__list .experience__item {
   font-weight: bold;
-  font-size: 30px;
+  font-size: clamp(30px, 2.375vw, 38px);
   line-height: 37px;
-  color: #ffff;
+  color: #b3b3ba;
+  white-space: nowrap;
 }
-.main .goals-wrapper .goal-slogan .goal-text {
-  margin-top: 30px;
+.main .experience .experience__list .experience__item--active {
+  color: transparent;
+  background-image: linear-gradient(90.13deg, #ef8080 0.84%, #f0145a 99.96%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.main .experience .experience__descr {
+  padding-top: clamp(30px, 3.75vw, 60px);
+  border-top: 4px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 0;
+  padding-left: 60px;
+  border-top: none;
+  border-left: 4px solid rgba(255, 255, 255, 0.3);
+}
+.main .experience .experience__descr .experience__title {
+  margin: 0;
+  font-size: clamp(20px, 1.875vw, 30px);
+  line-height: 24px;
+}
+.main .experience .experience__descr .experience__text {
+  margin: 30px 0 0;
   font-size: 19px;
   line-height: 30px;
-  color: #ffff;
 }
 .main .services-link {
   margin-top: 60px;
@@ -372,19 +386,13 @@ body {
 }
 
 .container-1 {
-  max-width: 1600px;
+  max-width: 1660px;
   margin: 0 auto;
-  padding: 0;
+  padding: 0 30px;
 }
 
 .container-2 {
   max-width: 1720px;
-  margin: 0 auto;
-  padding: 0;
-}
-
-.container-3 {
-  max-width: 1360px;
   margin: 0 auto;
   padding: 0;
 }
@@ -422,13 +430,13 @@ body {
   color: #ffffff;
 }
 
-.main .header .header-inner .header-inner-slogan-wrapper .inner-slogan, .main .goals-wrapper .goals .goal-item, .main .goals-wrapper .goals .custom-item1, .main .slogan {
+.main .header .header-inner .header-inner-slogan-wrapper .inner-slogan, .main .slogan {
   font-weight: bold;
   font-size: 38px;
   line-height: 46px;
 }
 
-.main .goals-wrapper .goals .custom-item1, .main .slogan {
+.main .slogan {
   background-image: linear-gradient(90deg, #f0145a, #ef8080);
   -webkit-background-clip: text;
   background-clip: text;

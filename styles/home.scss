@@ -42,6 +42,7 @@
       background-image: url(../img/logo/Logo-main.svg);
       background-repeat: no-repeat;
       background-position: top;
+      background-size: auto 100%;
       min-height: 100vh;
       .header-inner-wrapper {
         display: flex;
@@ -164,46 +165,61 @@
   // ==========
 
   // Цели
-  .goals-wrapper {
-    margin: 60px;
-    padding: 0;
-    display: flex;
-    .goals {
-      flex-shrink: 1;
-      flex-grow: 1;
-      padding: 14.5px 60px 14.5px 0;
-      gap: 30px;
-      max-width: 40%;
+  .experience {
+    .container-1 {
+      padding: 30px 200px;
+      display: flex;
+      overflow-x: hidden;
+    }
+
+    .experience__list {
       display: flex;
       flex-direction: column;
-      align-items: flex-end;
-      border-right: 4px solid rgba(255, 255, 255, 0.3);
-      .goal-item {
-        @extend %custom-font;
+      gap: 30px;
+      margin: 0;
+      padding-left: 0;
+      list-style: none;
+      padding-bottom: 0;
+      padding-right: 60px;
+      text-align: right;
+      .experience__item {
+        font-weight: bold;
+        font-size: clamp(30px, calc(38 / 1600 * 100vw), 38px);
+        line-height: 37px;
         color: #b3b3ba;
+        white-space: nowrap;
       }
-      .custom-item1 {
-        @extend %custom-font;
-        @extend %gradient-1;
-      }
-      .custom-item2 {
-        color: #f0145a;
+      .experience__item--active {
+        color: transparent;
+        background-image: linear-gradient(
+          90.13deg,
+          #ef8080 0.84%,
+          #f0145a 99.96%
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
       }
     }
-    .goal-slogan {
-      padding: 73px 0 73px 60px;
-      max-width: 60%;
-      .goal-title {
-        font-weight: bold;
-        font-size: 30px;
-        line-height: 37px;
-        color: $color-constant-1;
+    .experience__descr {
+      padding-top: clamp(30px, calc(60 / 1600 * 100vw), 60px);
+      border-top: 4px solid rgba(255, 255, 255, 0.3);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-top: 0;
+      padding-left: 60px;
+      border-top: none;
+      border-left: 4px solid rgba(255, 255, 255, 0.3);
+      .experience__title {
+        margin: 0;
+        font-size: clamp(20px, calc(30 / 1600 * 100vw), 30px);
+        line-height: 24px;
       }
-      .goal-text {
-        margin-top: 30px;
+      .experience__text {
+        margin: 30px 0 0;
         font-size: 19px;
         line-height: 30px;
-        color: $color-constant-1;
       }
     }
   }
